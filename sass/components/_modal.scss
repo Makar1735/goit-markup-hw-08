@@ -1,0 +1,249 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal {
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+    background-color: var(--fons-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+.modal-titl {
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1, 15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+
+    color: #212121;
+}
+
+
+.modal-text {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+
+}
+
+.modal-text-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 0;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+}
+
+.modal-input:focus,
+.modal-comment:focus {
+    border: 1px solid var(--accent-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-input:hover,
+.modal-comment:hover {
+    border: 1px solid var(--accent-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+.modal-input:focus+.modal-icon {
+    fill: var(--accent-color);
+
+
+}
+
+.modal-input:hover+.modal-icon {
+    fill: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.modal-wrap {
+    position: relative;
+}
+
+
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    letter-spacing: 0.01em;
+    color: #757575;
+
+
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: transparent;
+
+}
+
+.checkbox-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    gap: 5px;
+    color: #757575;
+
+}
+
+.label-check span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    fill: transparent;
+
+
+}
+
+.input-check:checked+.label-check span {
+    background-color: var(--accent-color);
+    border-color: transparent;
+    fill: var(--fons-color);
+
+}
+
+.input-check:focus+.label-check span {
+    border-color: var(--accent-color);
+
+}
+
+.police-text {
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: var(--accent-color);
+
+}
+
+.btn-comment {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 52px;
+    padding-right: 52px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--fons-color);
+
+    background: var(--background-button);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    fill: var(--accent-color);
+    
+    
+}
+
+
+
+.backdrop.is-hidden.modal {
+    transform: translate(-50%, -50%) scale(0);
+
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--fons-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+.btn :hover,
+.btn :focus {
+    fill: var(--accent-color);
+  
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}

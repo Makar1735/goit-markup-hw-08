@@ -1,0 +1,88 @@
+.foto-list {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+.foto-item:hover .foto-open {
+    transform: translateY(0);
+
+    
+
+}
+
+
+
+.foto-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+        &:focus {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+        }
+}
+
+
+
+.foto-open-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-open {
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: rgba(33, 150, 243, 0.9);
+    color: var(--fons-color);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.foto-section {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+
+
+}
+
+.foto-caption {
+
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+
+    color: #212121;
+
+}
+
+.foto-text {
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}

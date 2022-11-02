@@ -1,0 +1,45 @@
+.work {
+    display: none;
+    padding-top: 0;
+
+    @include desktop {
+        
+    }
+}
+
+.work__titl {
+    text-align: center;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+}
+
+.work__list {
+    display: flex;
+    gap: 30px;
+}
+
+.work__block {
+    position: relative;
+}
+
+.work__text {
+
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    font-weight: 700;
+    bottom: 0;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fons-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}
