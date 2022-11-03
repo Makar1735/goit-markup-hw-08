@@ -1,5 +1,9 @@
 .client-section {
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @include desktop {
+padding: 94px 0;
+    }
 }
 
 .client-titl {
@@ -15,14 +19,19 @@
 
 .client-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+
+    @include desktop {
+      display: flex;
+    }
 
 }
 
 
 .client-link {
-    width: 170px;
+    width: 210px;
     height: 92px;
     display: flex;
     align-items: center;
@@ -39,6 +48,14 @@
             color: var(--accent-color);
     
         }
+
+        @include tablet {
+            width: 226px;
+        }
+
+                @include desktop {
+                width: 170px;
+                }
 }
 
 

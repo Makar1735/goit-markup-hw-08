@@ -1,11 +1,23 @@
 .footer-containers {
-    display: flex;
+    text-align: center;
     align-items: baseline;
+
+    @include tablet {
+       display: flex;
+    }
+         @include desktop {
+             display: flex;
+         }
 }
 
 .footer-container {
-
-    margin-left: 70px;
+padding-top: 60px;
+    @include tablet {
+        margin-left: 70px;
+    }
+    @include desktop {
+        margin-left: 70px;
+    }
 }
 
 .footer-container-titl {
