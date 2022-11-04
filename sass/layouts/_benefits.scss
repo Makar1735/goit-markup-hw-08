@@ -50,13 +50,13 @@ padding: 60px 0;
 
 @include tablet {
     display: flex;
-    // flex-wrap: wrap;
+     flex-wrap: wrap;
    
 }
 
         @include desktop {
             display: flex;
-             flex-wrap: none;
+              flex-wrap: nowrap;
         
     }
 }

@@ -11,6 +11,8 @@
   --background-silver: #FFFFFF99;
   --background-coal: #2F303A;
   --background-pearl: #ECECEC;
+  --hero-gradient:linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4));
 }
 
 p,
@@ -537,7 +539,8 @@ textarea {
   align-items: center;
 }
 
-.heder.container {
+.header.container {
+  min-width: 480px;
   display: flex;
   align-items: center;
 }
@@ -546,9 +549,19 @@ textarea {
 .navigation {
   display: flex;
 }
+@media screen and (min-width: 1200px) {
+  .navigation {
+    display: flex;
+  }
+}
 
 .navigation__list {
-  display: flex;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    display: flex;
+  }
 }
 
 .navigation__item {
@@ -560,16 +573,25 @@ textarea {
 
 .logo,
 .logo :focus {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo,
+.logo :focus {
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    display: block;
+  }
 }
 
 .logo-accent {
@@ -613,8 +635,13 @@ textarea {
 
 /*--------CONTAKT------------ */
 .connect {
-  display: flex;
+  display: none;
   margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .connect {
+    display: flex;
+  }
 }
 
 .connect__item {
@@ -658,20 +685,37 @@ textarea {
   min-width: 480px;
   height: 600px;
   background: #2F303A;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.img/hero.img.jpg);
+  background-image: var(--hero-gradient), url(../images/hero.img/mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero.img/mobile-2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: var(--hero-gradient), url(../images/hero.img/tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero.img/tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
+    background-image: var(--hero-gradient), url(../images/hero.img/hero.img.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--hero-gradient), url(../images/hero.img/desktop-2x.jpg);
   }
 }
 
@@ -745,12 +789,13 @@ textarea {
 @media screen and (min-width: 768px) {
   .benefits__list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits__list {
     display: flex;
-    flex-wrap: none;
+    flex-wrap: nowrap;
   }
 }
 
@@ -993,6 +1038,7 @@ textarea {
 }
 
 .footer {
+  min-width: 480px;
   background: #2F303A;
   padding: 60px 0;
 }
