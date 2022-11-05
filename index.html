@@ -56,7 +56,58 @@
           </a>
         </li>
       </ul>
+
     </div>
+    <button type="button" class="menu-open-btn">o</button>
+    <div class="mob-menu">
+
+      <div class="menu-container">
+<button type="button" class="menu-close-btn">X</button>
+<ul class="mob-menu__list list">
+  <li class="mob-menu__item">
+    <a class="mob-menu__link  link" href="./index.html">Студія</a>
+  </li>
+  <li class="mob-menu__item">
+    <a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a>
+  </li>
+  <li class="mob-menu__item">
+    <a class="mob-menu__link link" href="">Контакти</a>
+  </li>
+</ul>
+
+<ul class="mob-connect">
+  <li class="mob-connect__item">
+    <a class="mob-connect__mailto link connect__mailto-icon" href="mailto:info@devstudio.com">
+      info@devstudio.com
+    </a>
+  </li>
+  <li class="mob-connect__item">
+    <a class="mob-connect__tel link connect__tel-icon" href="tel:+380961111111">
+      +38 096 111 11 11
+    </a>
+  </li>
+</ul>
+
+<ul class="nav-menu">
+  <li class="nav-menu-list">
+    <a href="" class="nav-menu-link">Instagram</a>
+  </li>
+  <li class="nav-menu-item">
+    <a href="" class="nav-menu-link">Twitter</a>
+  </li>
+  <li class="nav-menu-item">
+    <a href="" class="nav-menu-link">Facebook</a>
+  </li>
+  <li class="nav-menu-item">
+    <a href="" class="nav-menu-link">LinkedIn</a>
+  </li>
+</ul>
+</div>
+
+      </div>
+      
+    </div>
+
   </header>
   <main>
     <section class="hero">
@@ -129,20 +180,28 @@
         <ul class="work__list list">
           <li class="work__item link">
             <div class="work__block">
-              <img class="work__img" src="./images/doing/img.print.jpg" alt="Людина працюе за компьютером"
-                width="370" />
+              <img srcset="
+              ./images/doing/img.print.jpg 1x,
+              ./images/doing/img.printx2.jpg 2x
+              " src="./images/doing/img.print.jpg" alt="Людина працюе за компьютером" width="370" />
               <p class="work__text">Десктопні додатки</p>
             </div>
           </li>
           <li class="work__item link">
             <div class="work__block">
-              <img class="work__img" src="./images/doing/img.phone.jpg" alt="Людина дивиться в телефон" width="370" />
+              <img srcset="
+              ./images/doing/img.phone.jpg 1x,
+              ./images/doing/img.phonex2.jpg 2x
+              " src="./images/doing/img.phone.jpg" alt="Людина дивиться в телефон" width="370" />
               <p class="work__text">Мобільні додатки</p>
             </div>
           </li>
           <li class="work__item link">
             <div class="work__block">
-              <img class="work__img" src="./images/doing/img.pen.jpg" alt="Людина працюе за планшетом" width="370" />
+              <img srcset="
+              ./images/doing/img.pen.jpg 1x,
+              ./images/doing/img.penx2.jpg 2x
+              " src="./images/doing/img.pen.jpg" alt="Людина працюе за планшетом" width="370" />
               <p class="work__text">Дизайнерські рішення</p>
             </div>
           </li>

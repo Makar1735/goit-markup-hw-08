@@ -13,11 +13,16 @@
       text-align: center;
       padding-bottom: 50px;
       font-weight: 700;
-      font-size: 36px;
-      line-height: 1.16;
+      font-size: 28px;
+      line-height: 1.17;
       letter-spacing: 0.03em;
 
       color: #212121;
+
+      @include desktop {
+        font-size: 36px;
+            line-height: 1.16;
+      }
 
   }
 
@@ -34,17 +39,17 @@
   gap: 30px;
 
   @include tablet {
-    display: flex;
+        display: flex;
         flex-wrap: wrap;
-        // justify-content: center;
-        gap: 30px;
+        
   
   }
     @include desktop {
        
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 30px;
+    
     }
 
    
@@ -64,10 +69,7 @@
             width: calc((100% - 30px) /2);
         }
 
-                 @include desktop {
-        
-                     width: calc((100% - 30px) /4);
-                 }
+              
   }
 
   .team-section {
@@ -87,6 +89,7 @@
       letter-spacing: 0.03em;
 
       color: #212121;
+
   }
 
   .team-text {

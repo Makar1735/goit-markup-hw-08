@@ -1,19 +1,23 @@
 .footer-containers {
-    text-align: center;
+     text-align: center;
     align-items: baseline;
 
     @include tablet {
-       display: flex;
+   display: flex;
+flex-wrap: wrap;
+justify-content: space-around
+   
     }
          @include desktop {
              display: flex;
+             flex-wrap: nowrap;
          }
 }
 
 .footer-container {
 padding-top: 60px;
     @include tablet {
-        margin-left: 70px;
+    
     }
     @include desktop {
         margin-left: 70px;

@@ -48,7 +48,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 body {
@@ -152,21 +151,19 @@ textarea {
 @media screen and (min-width: 768px) {
   .footer-containers {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-containers {
     display: flex;
+    flex-wrap: nowrap;
   }
 }
 
 .footer-container {
   padding-top: 60px;
-}
-@media screen and (min-width: 768px) {
-  .footer-container {
-    margin-left: 70px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .footer-container {
@@ -210,7 +207,13 @@ textarea {
 }
 
 .footer-container-post {
-  margin-top: 60px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-container-post {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-container-post {
@@ -253,6 +256,11 @@ textarea {
 }
 .footer-form-input:focus {
   color: var(--fons-color);
+}
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form-input {
@@ -535,6 +543,8 @@ textarea {
 }
 
 .header-container {
+  padding-top: 16px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -542,14 +552,16 @@ textarea {
 .header.container {
   min-width: 480px;
   display: flex;
-  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header.container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* ------НАВИГАЦИЯ--------- */
-.navigation {
-  display: flex;
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .navigation {
     display: flex;
   }
@@ -557,6 +569,11 @@ textarea {
 
 .navigation__list {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+  }
 }
 @media screen and (min-width: 1200px) {
   .navigation__list {
@@ -573,8 +590,6 @@ textarea {
 
 .logo,
 .logo :focus {
-  padding-top: 16px;
-  padding-bottom: 16px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -635,8 +650,12 @@ textarea {
 
 /*--------CONTAKT------------ */
 .connect {
-  display: none;
   margin-left: auto;
+}
+@media (max-width: 768px) {
+  .connect {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
   .connect {
@@ -676,6 +695,58 @@ textarea {
 .connect__mailto:focus,
 .connect__tel:focus {
   color: var(--accent-color);
+}
+
+.menu-open-btn {
+  margin-left: auto;
+  align-items: center;
+}
+
+.menu-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: floralwhite;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.menu-close-btn {
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.mob-menu__item {
+  margin-bottom: 32px;
+}
+
+.mob-menu__item :not(:last-child) {
+  margin-bottom: 0;
+}
+
+.mob-menu__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+  margin-bottom: 32px;
+}
+
+.mob-connect {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
 }
 
 .hero {
@@ -821,9 +892,14 @@ textarea {
 }
 
 .work {
-  display: none;
   padding-top: 0;
 }
+@media (max-width: 1200px) {
+  .work {
+    display: none;
+  }
+}
+
 .work__titl {
   text-align: center;
   margin-bottom: 50px;
@@ -872,10 +948,16 @@ textarea {
   text-align: center;
   padding-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .team-titl {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .team-item {
@@ -889,14 +971,13 @@ textarea {
   .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team-list {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 30px;
   }
 }
 
@@ -908,11 +989,6 @@ textarea {
 @media screen and (min-width: 768px) {
   .team-link {
     width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-link {
-    width: calc((100% - 30px) / 4);
   }
 }
 
@@ -1062,7 +1138,7 @@ textarea {
 }
 
 .footer-item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .footer-ltem:last-child {

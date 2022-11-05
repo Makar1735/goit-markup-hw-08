@@ -1,5 +1,15 @@
+
+
+
 .footer-container-post {
-    margin-top: 60px;
+    padding-top: 60px;
+
+    @include tablet {
+       display: flex;
+       flex-direction: column;
+    
+       
+    }
 
     @include desktop {
 margin-left: 93px;
@@ -46,6 +56,10 @@ display: flex;
             color: var(--fons-color);
         }
 
+        @include tablet {
+            width: 450px;
+        }
+
         @include desktop {
            width: 358px;
         }
@@ -57,6 +71,11 @@ display: flex;
 .footer-form-post {
     display: grid;
     gap: 20px;
+
+    @include tablet {
+      
+       
+    }
     @include desktop {
        display: flex;
     gap: 12px;
