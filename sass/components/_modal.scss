@@ -10,14 +10,21 @@
 
 .modal {
     padding: 40px;
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: var(--fons-color);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+
+    @include desktop {
+      width: 528px;
+      height: 581px;
+    }
 
 
 }
@@ -26,12 +33,15 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1, 15;
+    line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
 
     color: #212121;
+
+   
+
 }
 
 
@@ -138,11 +148,16 @@
     font-family: 'Roboto' sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     gap: 5px;
     color: #757575;
+
+    @include desktop {
+        font-size: 14px;
+            line-height: 1.7;
+    }
 
 }
 
@@ -172,12 +187,16 @@
 }
 
 .police-text {
-
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     color: var(--accent-color);
+
+    @include desktop {
+     font-size: 14px;
+    line-height: 1.71;
+    }
 
 }
 
