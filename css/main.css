@@ -48,7 +48,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 body {
@@ -78,19 +77,26 @@ textarea {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    outline: 1px solid red;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    outline: 1px solid yellow;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    outline: 1px solid blueviolet;
   }
 }
 
@@ -850,11 +856,10 @@ textarea {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 0;
   text-align: center;
-  min-width: 480px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   background: #2F303A;
   background-image: var(--hero-gradient), url(../images/hero.img/mobile.jpg);
   background-repeat: no-repeat;
@@ -870,6 +875,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    height: 400px;
     background-image: var(--hero-gradient), url(../images/hero.img/tablet.jpg);
   }
 }
@@ -880,6 +886,9 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
     max-width: 1600px;
     background-image: var(--hero-gradient), url(../images/hero.img/hero.img.jpg);
   }
@@ -1035,7 +1044,7 @@ textarea {
 }
 
 .team {
-  min-width: 480px;
+  width: 480px;
   background-color: #F5F4FA;
 }
 @media screen and (min-width: 1200px) {
@@ -1214,7 +1223,7 @@ textarea {
 }
 
 .footer {
-  min-width: 480px;
+  width: 480px;
   background: #2F303A;
   padding: 60px 0;
 }
