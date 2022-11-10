@@ -1,5 +1,5 @@
 .footer-containers {
-     text-align: center;
+      text-align: center;
     align-items: baseline;
 
     @include tablet {
@@ -33,6 +33,10 @@ padding-top: 60px;
     text-transform: uppercase;
 
     color: var(--fons-color);
+
+    @include desktop {
+        display: flex;
+    }
 }
 
 .footer-container-list {

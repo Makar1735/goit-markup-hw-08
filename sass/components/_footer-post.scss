@@ -29,7 +29,7 @@ display: flex;
 }
 
 .footer-label-titl {
-    display: block;
+     display: block;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -37,6 +37,9 @@ display: flex;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--fons-color);
+    @include desktop {
+        display: flex;
+    }
 }
 
 .footer-form-input {

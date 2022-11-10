@@ -9,8 +9,9 @@
 }
 
 .modal {
+   
     padding: 40px;
-    width: 450px;
+    max-width: 450px;
     height: 609px;
     background-color: var(--fons-color);
     position: absolute;

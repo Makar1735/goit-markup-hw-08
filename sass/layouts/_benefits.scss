@@ -70,7 +70,9 @@ padding: 60px 0;
 
 .benefits__caption {
 
-    text-align: center;
+  text-align: center;
+
+
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 700;
@@ -82,11 +84,12 @@ padding: 60px 0;
 
 
 @include tablet {
+display: flex;
 
 }
 
 @include desktop {
- text-align: none;
+ 
     }
 }
    
